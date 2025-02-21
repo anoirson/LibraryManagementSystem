@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\LibraryManagementSystem.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src/Factories/" />
+    <Folder Include="src/DTOs/Author/" />
+    <Folder Include="src/DTOs/Book/" />
+    <Folder Include="src/DTOs/Category/" />
+    <Folder Include="src/DTOs/Notification/" />
+    <Folder Include="src/DTOs/Publisher/" />
+    <Folder Include="src/DTOs/Recommendation/" />
+    <Folder Include="src/DTOs/Report/" />
+    <Folder Include="src/DTOs/Reservation/" />
+  </ItemGroup>
+
+</Project>
