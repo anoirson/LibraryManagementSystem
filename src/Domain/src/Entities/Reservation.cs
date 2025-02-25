@@ -9,12 +9,14 @@ public class Reservation : AuditableEntity
     public DateTime ReservationDate { get; set; }
     public ReservationStatus Status { get; set; }
 
-    public Reservation(Guid userId, Guid bookId, DateTime reservationDate, ReservationStatus status)
+    private Reservation() { }
+
+    public Reservation(Guid userId, Guid bookId, DateTime reservationDate)
     {
         UserId = userId;
         BookId = bookId;
         ReservationDate = reservationDate;
-        Status = status;
+        Status = ReservationStatus.Pending;
     }
 
     public override string ToString()

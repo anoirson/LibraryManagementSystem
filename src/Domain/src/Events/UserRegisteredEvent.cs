@@ -5,9 +5,9 @@ public class UserRegisteredEvent : BaseDomainEvent
     public Guid UserId {get;}
     public Email Email {get;}
 
-    public UserRegisteredEvent(Guid userId, string email)
+    public UserRegisteredEvent(Guid UserId, string email)
     {
-        UserId = userId;
+        UserId = UserId;
         Email = new Email(email);
     }
 

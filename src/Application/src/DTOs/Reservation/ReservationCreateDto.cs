@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace LibraryManagementSystem.Application;
+namespace LibraryManagementSystem.Application.DTOs;
 
 public class ReservationCreateDto : AuditableCreateDto
 {
@@ -9,6 +9,7 @@ public class ReservationCreateDto : AuditableCreateDto
 
     [Required]
     public Guid BookId { get; set; }
+    public DateTime ReservationDate { get; set; }
 
 
 }

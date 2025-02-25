@@ -20,6 +20,8 @@
     <Folder Include="src/DTOs/Recommendation/" />
     <Folder Include="src/DTOs/Report/" />
     <Folder Include="src/DTOs/Reservation/" />
+    <Folder Include="src/Repositories/" />
+    <Folder Include="src/Services/" />
   </ItemGroup>
 
 </Project>

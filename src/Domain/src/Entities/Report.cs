@@ -6,6 +6,8 @@ public class Report : BaseEntity
     public string Description { get; set; }
     public DateTime GeneratedAt { get; set; }
 
+    private Report() { }
+
     public Report(string title, string description, DateTime generatedAt)
     {
         Title = title;

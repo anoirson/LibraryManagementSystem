@@ -1,9 +1,10 @@
+using LibraryManagementSystem.Application.DTOs;
 using LibraryManagementSystem.Domain;
 
-namespace LibraryManagementSystem.Application;
-public class NotificationDtoFactory : DtoFactoryBase<Notification, NotificationReadDto>
+namespace LibraryManagementSystem.Application.Factories;
+public class NotificationDtoFactory : ReadOnlyDtoFactoryBase<Notification, NotificationReadDto>
 {
-    public override NotificationReadDto Create(Notification entity)
+    public override NotificationReadDto CreateRead(Notification entity)
     {
         return new NotificationReadDto
         {

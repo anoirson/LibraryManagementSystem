@@ -1,9 +1,10 @@
+using LibraryManagementSystem.Application.DTOs;
 using LibraryManagementSystem.Domain;
 
-namespace LibraryManagementSystem.Application;
-public class ReportDtoFactory : DtoFactoryBase<Report, ReportReadDto>
+namespace LibraryManagementSystem.Application.Factories;
+public class ReportDtoFactory : ReadOnlyDtoFactoryBase<Report, ReportReadDto>
 {
-    public override ReportReadDto Create(Report entity)
+    public override ReportReadDto CreateRead(Report entity)
     {
         return new ReportReadDto
         {

@@ -8,6 +8,8 @@ public class Notification : BaseEntity
     public bool IsRead { get; set; }
     public DateTime SentAt { get; set; }
 
+    private Notification() { }
+
     public Notification(Guid userId, string message)
     {
         UserId = userId;

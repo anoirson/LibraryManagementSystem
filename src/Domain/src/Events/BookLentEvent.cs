@@ -6,9 +6,9 @@ public class BookLentEvent : BaseDomainEvent
     public Guid UserId { get; set; }
     public Guid BookId { get; set; }
 
-    public BookLentEvent (Guid bookId, Guid userId) 
+    public BookLentEvent (Guid bookId, Guid UserId) 
     {
-        UserId = userId;
+        UserId = UserId;
         BookId = bookId;
     }
    

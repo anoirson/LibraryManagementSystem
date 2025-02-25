@@ -8,9 +8,11 @@ public class Recommendation : BaseEntity
     public Book Book { get; set; }
     public double Score { get; set; }
 
-    public Recommendation(Guid userId, Guid bookId, double score)
+    private Recommendation() { }
+
+    public Recommendation(Guid UserId, Guid bookId, double score)
     {
-        UserId = userId;
+        UserId = UserId;
         BookId = bookId;
         Score = score;
     }

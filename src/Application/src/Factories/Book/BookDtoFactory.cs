@@ -1,10 +1,23 @@
+using LibraryManagementSystem.Application.DTOs;
 using LibraryManagementSystem.Domain;
 
-namespace LibraryManagementSystem.Application;
+namespace LibraryManagementSystem.Application.Factories;
 
-public class BookDtoFactory : DtoFactoryBase<Book, BookReadDto>
+public class BookDtoFactory
+    : DtoFactoryBase<Book, BookReadDto, BookCreateDto, BookUpdateDto>
 {
-    public override BookReadDto Create(Book entity)
+    public override Book CreateEntity(BookCreateDto dto)
+    {
+        return new Book(dto.Title,
+         dto.ISBN,
+         dto.PublicationYear,
+         dto.AvailableCopies,
+         dto.AuthorId,
+         dto.CategoryId,
+         dto.PublisherId);
+    }
+
+    public override BookReadDto CreateRead(Book entity)
     {
         return new BookReadDto
         {
@@ -18,5 +31,18 @@ public class BookDtoFactory : DtoFactoryBase<Book, BookReadDto>
             CategoryName = entity.Category.Name,
             PublisherName = entity.Publisher.Name
         };
+    }
+    public override Book UpdateEntity(Book entity, BookUpdateDto dto)
+    {
+        if (!string.IsNullOrWhiteSpace(dto.Title))
+            entity.Title = dto.Title;
+
+        if (dto.AvailableCopies.HasValue)
+            entity.AvailableCopies = dto.AvailableCopies.Value;
+
+        if (dto.Status.HasValue)
+            entity.Status = dto.Status.Value;
+        
+        return entity;
     }
 }

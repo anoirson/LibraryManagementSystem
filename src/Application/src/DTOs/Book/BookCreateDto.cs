@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace LibraryManagementSystem.Application;
+namespace LibraryManagementSystem.Application.DTOs;
 
 public class BookCreateDto : AuditableCreateDto
 {

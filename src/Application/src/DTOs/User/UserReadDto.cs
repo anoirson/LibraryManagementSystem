@@ -1,6 +1,6 @@
 ﻿using LibraryManagementSystem.Domain;
 
-namespace LibraryManagementSystem.Application;
+namespace LibraryManagementSystem.Application.DTOs;
 
 public class UserReadDto : AuditableReadDto
 {

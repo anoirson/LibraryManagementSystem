@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using LibraryManagementSystem.Domain;
 
-namespace LibraryManagementSystem.Application;
+namespace LibraryManagementSystem.Application.DTOs;
 
 public class UserCreateDto : AuditableCreateDto
 {

@@ -1,7 +1,7 @@
-namespace LibraryManagementSystem.Application;
-
-public interface IDtoFactory<TDomain, TDto>
+namespace LibraryManagementSystem.Application.Factories;
+public interface IDtoFactory<TDomain, TReadDto, TCreateDto, TUpdateDto> 
+    : IReadOnlyDtoFactory<TDomain, TReadDto>
 {
-    TDto Create(TDomain entity);
-    IEnumerable<TDto> Create(IEnumerable<TDomain> entities);
+    TDomain CreateEntity(TCreateDto dto);
+    TDomain UpdateEntity(TDomain entity, TUpdateDto dto);
 }

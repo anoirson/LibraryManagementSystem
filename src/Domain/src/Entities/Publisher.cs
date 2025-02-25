@@ -7,6 +7,8 @@ public class Publisher : BaseEntity
     public string ContactEmail { get; set; }
     public ICollection<Book> Books { get; set; } = [];
 
+    private Publisher() { }
+
     public Publisher(string name, string address, string contactEmail)
     {
         Name = name;
